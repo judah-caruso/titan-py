@@ -2,7 +2,7 @@
 
 Titan is a game/program launcher, tracker, and manager written in Python.
 
-Latest Version: [v0.10](https://github.com/kyoto-shift/titan-py/releases)
+Latest Version: [v0.10](https://github.com/kyoto-shift/titan-py/releases/tag/v0.10)
 
 ## Features
 * Minimally manage your game library.
@@ -19,7 +19,7 @@ Titan can be installed either by downloading a [binary from the releases page](h
 
 ### Automatic
 
-* Download the latest release from [the releases page](https://github.com/kyoto-shift/titan-py/releases).
+* Download the latest release **(titan-vXXX-win.zip)** from [the releases page](https://github.com/kyoto-shift/titan-py/releases).
 * Open the .zip file and extract the **titan** folder.
 * Run **titan.exe**. *Note: You may need to run Titan as Administrator depending on where you extracted it/what entries you make.*
 
