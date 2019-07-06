@@ -1,0 +1,55 @@
+// This file contains a simple build configuration to be used with
+// Auto PY to EXE - https://pypi.org/project/auto-py-to-exe/
+// Before using this configuration, change any instance of [location_to]
+// to where you cloned this github repo.
+
+// Example:
+// Before -> [location_for]/entrypoints/titan_gui.py
+//  After -> C:/Users/JonDoe/Repos/titan/entrypoints/titan_gui.py
+
+{
+    "command_data": {
+        "onefile": false,
+        "console": false,
+        "additional_files": {
+            "addFiles_nrrtk": {
+                "source":"[location_to]/titan_logo.ico",
+                "destination": "."
+            }
+        }
+    },
+    "id_injectable": {
+        "file": "[location_for]/entrypoints/titan_gui.py",
+        "icon": "[location_for]/titan_logo.ico",
+        "output_location": "[location_for]/_dist",
+        "VALUE--upx-dir": "",
+        "VALUE--log-level": "",
+        "VALUE-n": "titan",
+        "VALUE--add-binary": "",
+        "VALUE-p": "",
+        "COMMASPLIT--hidden-import": "",
+        "VALUE--additional-hooks-dir": "",
+        "VALUE--runtime-hook": "",
+        "COMMASPLIT--exclude-module": "",
+        "VALUE--key": "",
+        "VALUE--debug": "",
+        "VALUE--version-file": "",
+        "VALUE-m": "",
+        "VALUE-r": "",
+        "VALUE--osx-bundle-identifier": "",
+        "VALUE--runtime-tmpdir": "",
+        "extra_command_data": ""
+    },
+    "switches": {
+        "disable_recursion_limit": false,
+        "OPTION-a": false,
+        "OPTION--clean": true,
+        "OPTION-s": false,
+        "OPTION--noupx": false,
+        "OPTION--uac-admin": false,
+        "OPTION--uac-uiaccess": false,
+        "OPTION--win-private-assemblies": false,
+        "OPTION--win-no-prefer-redirects": false,
+        "OPTION--bootloader-ignore-signals": false
+    }
+}
