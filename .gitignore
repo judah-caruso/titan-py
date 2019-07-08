@@ -1,4 +1,4 @@
-build_config.json
+config_*.json
 titan_gui.spec
 **/__pycache__
 *.pyc
