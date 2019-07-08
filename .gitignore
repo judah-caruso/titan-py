@@ -2,4 +2,5 @@ build_config.json
 titan_gui.spec
 **/__pycache__
 *.pyc
-_dist/*
+**/_dist/*
+*.psd

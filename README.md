@@ -2,12 +2,13 @@
 
 Titan is a game/program launcher, tracker, and manager written in Python.
 
-Latest Version: [v0.10](https://github.com/kyoto-shift/titan-py/releases/tag/v0.10)
+Latest Version: [v0.11](https://github.com/kyoto-shift/titan-py/releases/tag/v0.11)
 
 ## Features
 * Minimally manage your game library.
 * Easily "chain" programs together *(Example: opening OBS, LiveSplit, and your favorite Speedgame with one click)*.
-* Keep track of how much you've used **any** program *(Example: track how long you've worked on a project in Ableton, how long you've played Titanfall 2, etc.)*.
+* Keep track of how much you've used **any** program *(Example: track how long you've worked on a project in your editor, how long you've played a game for, etc.)*.
+* Auto updater! Download once, easily update forever!
 
 ## What Titan is not
 * A fully-featured game library manager, such as: [Playnite](https://playnite.link/), [LaunchBox](https://www.launchbox-app.com/download), etc.

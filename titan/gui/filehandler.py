@@ -24,10 +24,10 @@ import toml
 import inspect
 
 from titan.gui import utils
-from titan.globals import CONFIG_FILE, LOG_FILE, VERSION, CFG_VERSION, NAME, NAME_LOW
+from titan.globals import CONFIG_FILE, LOG_FILE, VERSION, NAME, NAME_LOW
 
 TITAN_INFO_COMMENT = f" # Internal toml object used by {NAME}. Editing is not recommended."
-TITAN_INFO_RAW = toml.dumps({f"{NAME_LOW}_info": {"cfg_version": CFG_VERSION}})
+TITAN_INFO_RAW = toml.dumps({f"{NAME_LOW}_info": {"cfg_version": VERSION}})
 TITAN_TABLE_HEADER = TITAN_INFO_RAW.split()[0]
 TITAN_INFO = TITAN_TABLE_HEADER + TITAN_INFO_COMMENT + TITAN_INFO_RAW[len(TITAN_TABLE_HEADER):]
 

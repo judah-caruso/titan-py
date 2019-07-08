@@ -23,13 +23,12 @@ import sys
 
 NAME = "Titan"
 NAME_LOW = NAME.lower()
-
-VERSION = "0.10"
-CFG_VERSION = float(VERSION)
+VERSION = "0.11"
 
 USAGE = f"{NAME} v{VERSION}\nUsage: {NAME_LOW} (help|add|list|stats) [game]"
 LONG_USAGE = ""
 
-CONFIG_FILE = os.path.join(os.path.dirname(sys.argv[0]), f"{NAME_LOW}_games.toml")
-STATS_FILE = os.path.join(os.path.dirname(sys.argv[0]), f"{NAME_LOW}_stats.toml")
-LOG_FILE = os.path.join(os.path.dirname(sys.argv[0]), f"{NAME_LOW}.log")
+WORKING_DIR = os.path.dirname(sys.argv[0])
+CONFIG_FILE = os.path.join(WORKING_DIR, f"{NAME_LOW}_games.toml")
+STATS_FILE = os.path.join(WORKING_DIR, f"{NAME_LOW}_stats.toml")
+LOG_FILE = os.path.join(WORKING_DIR, f"{NAME_LOW}.log")

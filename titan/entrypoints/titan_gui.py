@@ -19,11 +19,13 @@
 """
 
 import wx
+import sys
 import time
 import asyncio
 import datetime
 
 from titan import runner
+from titan import updater
 from titan.globals import CONFIG_FILE, VERSION, NAME, NAME_LOW
 from titan.gui import utils
 from titan.gui import filehandler
@@ -40,6 +42,10 @@ class TitanFrame(wx.Frame):
         self.SetIcon(wx.Icon("titan_logo.ico"))
         self.SetMinSize((500, 250))
         self.entry_is_running = False
+
+        update_manager = updater.Updater(self)
+        StartCoroutine(update_manager.check_for_updates, self)
+
         self.init_gui()
 
     def init_gui(self):
@@ -103,7 +109,11 @@ class TitanFrame(wx.Frame):
 
         self.Centre()
         self.CreateStatusBar()
-        self.SetStatusText("Initialized successfully!")
+
+        if len(sys.argv) >= 2 and sys.argv[1] == "updated":
+            self.SetStatusText(f"{NAME} updated successfully!")
+        else:
+            self.SetStatusText("Initialized successfully!")
 
     def _save_data(self):
         if len(self.entrylist.entries) <= 0:
