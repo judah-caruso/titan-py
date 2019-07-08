@@ -90,4 +90,7 @@ If you'd rather edit entries manually, you can edit the `titan_games.toml` file 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
+
 [GNU GPLv2](https://choosealicense.com/licenses/gpl-2.0/)
+
+For third-party license information, see [NOTICE.txt](NOTICE.txt)
