@@ -29,24 +29,26 @@ Titan can be installed either by downloading a [binary from the releases page](h
 **Requirements: (requirements.txt)**  
 * **Python 3.7.3** (other versions untested)
 * **wxPython** - `pip install wxPython==4.0.6`
+* **psutil** - `pip install psutil==5.6.3`
 * **wxasync** - `pip install wxasync==0.4`
 * **toml** - `pip install toml==0.10.0`
 
 
-Compilation with PyInstaller: **(Recommended)**
+Compilation with PyInstaller:
 ```bash
 git clone https://github.com/kyoto-shift/titan-py.git
 cd titan/
 pip install pyinstaller && pip install -r requirements.txt
-pyinstaller -y -w -i "./titan_logo.ico" --add-data "./titan_logo.ico";"." --clean -n titan "./entrypoints/titan_gui.py"
+pyinstaller -y -F -w -n titan_patcher --distpath "./titan/patcher/_dist" "./titan/patcher/patcher.py"
+pyinstaller -y -w -i "./titan_logo.ico" --add-data "./titan_logo.ico";"." --add-data "./titan/patcher/_dist/titan_patcher.exe";"." --clean -n titan --distpath "./titan/_dist" "./titan/entrypoints/titan_gui.py"
+rm -rf build/
 ```
 
-Compilation with Setuptools:
-```bash
-git clone https://github.com/kyoto-shift/titan-py.git
-cd titan/
-python setup.py
-```
+The final built version is in `titan/_dist`
+
+If you'd like to automate this process, use [Auto PY To EXE](https://pypi.org/project/auto-py-to-exe/) and use the `build_patcher_example.json` and `build_titan_example.json` configurations. Be sure to edit them before using them. 
+
+*Note: The Titan configuration requires Patcher to be built first.*
 
 ## Usage
 
